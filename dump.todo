@@ -8,6 +8,7 @@
 ☐ Invitation Service
   ☐ invitations should be closely coupled to the user in the schema
     ☐ once invitation is accepted both the users are each other's friends
+      ☐ Ivitation is one sided 
     ☐ if rejected then simply remove the invitation
 ☐ Chat Service
   ☐ Once they are friends they can privately chat 

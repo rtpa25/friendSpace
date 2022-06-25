@@ -11,6 +11,11 @@ async function bootstrap() {
     credentials: true,
   });
   app.useGlobalFilters(new SupertokensExceptionFilter());
+  // let usersResponse = await getUsersNewestFirst();
+  // let users = usersResponse.users;
+  // users.forEach(async (element) => {
+  //   await deleteUser(element.user.id);
+  // });
   await app.listen(3001);
 }
 bootstrap();

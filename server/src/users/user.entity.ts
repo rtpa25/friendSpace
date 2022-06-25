@@ -5,10 +5,10 @@ export type UserDocument = User & Document;
 
 @Schema()
 export class User {
-  @Prop()
+  @Prop({ isRequired: true, unique: true })
   email: string;
 
-  @Prop()
+  @Prop({ isRequired: true, unique: true })
   username: string;
 
   @Prop([{ type: mongoose.Schema.Types.ObjectId, ref: 'User', default: [] }])
