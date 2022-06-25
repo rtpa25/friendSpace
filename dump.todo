@@ -1,0 +1,29 @@
+☐ Auth Service
+  ☐ Build the user module and integrate mongoose & mongoDB
+  ☐ Check SuperTokens docs for nest js 
+    ☐ Figure out post auth logic with user repo and services
+    ☐ Setup the backend auth and test on postman
+  ☐ Setup the frontend
+    ☐ Test the entire flow of the auth page
+☐ Invitation Service
+  ☐ invitations should be closely coupled to the user in the schema
+    ☐ once invitation is accepted both the users are each other's friends
+    ☐ if rejected then simply remove the invitation
+☐ Chat Service
+  ☐ Once they are friends they can privately chat 
+  ☐ figure out using socket.io with nest js from the docs
+  ☐ Build the UI and test
+☐ Video Call Room Service
+  - No idea as of now
+  - will use webRTC
+
+Tech Stack
+- React
+- React Router DOM
+- Redux-Toolkit (not sure yet if required)
+- Tailwind CSS
+- Socket.io
+- NestJS
+- MongoDB and Mongoose
+- Typescript
+- SuperTokens
