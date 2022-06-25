@@ -10,7 +10,6 @@ import * as reactRouterDom from 'react-router-dom';
 
 SuperTokens.init({
   appInfo: {
-    // learn more about this on https://supertokens.com/docs/emailpassword/appinfo
     appName: 'demo',
     apiDomain: 'http://localhost:3001',
     websiteDomain: 'http://localhost:3000',
@@ -30,6 +29,19 @@ SuperTokens.init({
           ],
         },
       },
+      palette: {
+        background: '#36393F',
+        inputBackground: '#202225',
+        primary: '#5865F2',
+        textTitle: 'white',
+        textLabel: '#B5B6B8',
+        textInput: 'white',
+      },
+      style: {
+        superTokensBranding: {
+          visibility: 'hidden',
+        },
+      },
     }),
     Session.init(),
   ],
@@ -38,11 +50,7 @@ SuperTokens.init({
 const App: FC = () => {
   return (
     <BrowserRouter>
-      <Routes>
-        {/*This renders the login UI on the /auth route*/}
-        {getSuperTokensRoutesForReactRouterDom(reactRouterDom)}
-        {/*Your app routes*/}
-      </Routes>
+      <Routes>{getSuperTokensRoutesForReactRouterDom(reactRouterDom)}</Routes>
     </BrowserRouter>
   );
 };

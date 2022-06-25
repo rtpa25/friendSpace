@@ -7,9 +7,17 @@
     ✔ Test the entire flow of the auth page @done (6/25/2022, 12:40:35 PM)
 ☐ Invitation Service
   ☐ invitations should be closely coupled to the user in the schema
+    ✔ Server @done (6/25/2022, 6:32:21 PM)
+    ☐ Client
     ☐ once invitation is accepted both the users are each other's friends
+      ✔ Server @done (6/25/2022, 6:32:23 PM)
+      ☐ Client
       ☐ Ivitation is one sided 
+        ✔ Server @done (6/25/2022, 6:32:25 PM)
+        ☐ Client
     ☐ if rejected then simply remove the invitation
+      ✔ Server @done (6/25/2022, 6:32:26 PM)
+      ☐ Client
 ☐ Chat Service
   ☐ Once they are friends they can privately chat 
   ☐ figure out using socket.io with nest js from the docs
