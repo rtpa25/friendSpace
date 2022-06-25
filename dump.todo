@@ -1,10 +1,10 @@
-☐ Auth Service
-  ☐ Build the user module and integrate mongoose & mongoDB
-  ☐ Check SuperTokens docs for nest js 
-    ☐ Figure out post auth logic with user repo and services
-    ☐ Setup the backend auth and test on postman
-  ☐ Setup the frontend
-    ☐ Test the entire flow of the auth page
+✔ Auth Service @done (6/25/2022, 12:40:40 PM)
+  ✔ Build the user module and integrate mongoose & mongoDB @done (6/25/2022, 10:47:12 AM)
+  ✔ Check SuperTokens docs for nest js @done (6/25/2022, 12:40:38 PM)
+    ✔ Figure out post auth logic with user repo and services @done (6/25/2022, 12:40:31 PM)
+    ✔ Setup the backend auth and test on postman @done (6/25/2022, 12:40:33 PM)
+  ✔ Setup the frontend @done (6/25/2022, 12:40:37 PM)
+    ✔ Test the entire flow of the auth page @done (6/25/2022, 12:40:35 PM)
 ☐ Invitation Service
   ☐ invitations should be closely coupled to the user in the schema
     ☐ once invitation is accepted both the users are each other's friends
