@@ -1,12 +1,15 @@
 import { FC } from 'react';
-import EmailPassword from 'supertokens-auth-react/recipe/emailpassword';
+import EmailPassword, {
+  EmailPasswordAuth,
+} from 'supertokens-auth-react/recipe/emailpassword';
 import Session from 'supertokens-auth-react/recipe/session';
-import { BrowserRouter, Routes } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import SuperTokens, {
   getSuperTokensRoutesForReactRouterDom,
 } from 'supertokens-auth-react';
 import * as reactRouterDom from 'react-router-dom';
+import Home from './components/Home';
 
 SuperTokens.init({
   appInfo: {
@@ -50,7 +53,17 @@ SuperTokens.init({
 const App: FC = () => {
   return (
     <BrowserRouter>
-      <Routes>{getSuperTokensRoutesForReactRouterDom(reactRouterDom)}</Routes>
+      <Routes>
+        {getSuperTokensRoutesForReactRouterDom(reactRouterDom)}
+        <Route
+          path='/'
+          element={
+            <EmailPasswordAuth>
+              <Home />
+            </EmailPasswordAuth>
+          }
+        />
+      </Routes>
     </BrowserRouter>
   );
 };

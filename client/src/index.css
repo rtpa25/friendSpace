@@ -1,11 +1,17 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 #supertokens-root {
   background-color: #5865f2;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+button {
+  border: none;
+  cursor: pointer;
 }

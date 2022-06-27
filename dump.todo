@@ -1,23 +1,46 @@
 ✔ Auth Service @done (6/25/2022, 12:40:40 PM)
+  ✔ UI should be like discord @done (6/25/2022, 6:54:06 PM)
   ✔ Build the user module and integrate mongoose & mongoDB @done (6/25/2022, 10:47:12 AM)
   ✔ Check SuperTokens docs for nest js @done (6/25/2022, 12:40:38 PM)
     ✔ Figure out post auth logic with user repo and services @done (6/25/2022, 12:40:31 PM)
     ✔ Setup the backend auth and test on postman @done (6/25/2022, 12:40:33 PM)
   ✔ Setup the frontend @done (6/25/2022, 12:40:37 PM)
     ✔ Test the entire flow of the auth page @done (6/25/2022, 12:40:35 PM)
-☐ Invitation Service
-  ☐ invitations should be closely coupled to the user in the schema
-    ✔ Server @done (6/25/2022, 6:32:21 PM)
-    ☐ Client
-    ☐ once invitation is accepted both the users are each other's friends
+✔ Invitation Service @done (6/27/2022, 3:46:59 PM)
+  ✔ Server @done (6/26/2022, 11:39:36 AM)
+    ✔ invitations should be closely coupled to the user in the schema @done (6/26/2022, 11:39:27 AM)
+      ✔ Server @done (6/25/2022, 6:32:21 PM)
+    ✔ once invitation is accepted both the users are each other's friends @done (6/26/2022, 11:39:29 AM)
       ✔ Server @done (6/25/2022, 6:32:23 PM)
-      ☐ Client
-      ☐ Ivitation is one sided 
+      ✔ Ivitation is one sided @done (6/26/2022, 11:39:31 AM)
         ✔ Server @done (6/25/2022, 6:32:25 PM)
-        ☐ Client
-    ☐ if rejected then simply remove the invitation
+    ✔ if rejected then simply remove the invitation @done (6/26/2022, 11:39:34 AM)
       ✔ Server @done (6/25/2022, 6:32:26 PM)
-      ☐ Client
+  ✔ Client @done (6/27/2022, 3:46:56 PM)
+    ✔ Fetch all the users friends and render them in the friendList page @done (6/27/2022, 3:46:34 PM)
+      ✔ build the nessecary UI @done (6/27/2022, 11:54:12 AM)
+      ✔ Create an axios instance to avoid writting base url @done (6/27/2022, 11:54:14 AM)
+      ✔ build a loder for loading states @done (6/27/2022, 3:15:19 PM)
+      ✔ fetch the friends and render them @done (6/27/2022, 11:54:24 AM)
+      ✔ Do sufficient error handling @done (6/27/2022, 3:15:21 PM)
+      ✔ Get the state global @done (6/27/2022, 3:46:31 PM)
+    ✔ Fetch all the invitations of the friends and render them in the invitations section @done (6/27/2022, 3:46:39 PM)
+      ✔ build the nessecary UI @done (6/27/2022, 11:54:28 AM)
+      ✔ User the loader @done (6/27/2022, 3:15:46 PM)
+      ✔ fetch the invites and render them @done (6/27/2022, 11:54:30 AM)
+      ✔ Do sufficient error handling @done (6/27/2022, 3:15:48 PM)
+      ✔ Get the state global @done (6/27/2022, 3:46:36 PM)
+    ✔ Hook up the accept and reject invitations api calls with the respective buttons @done (6/27/2022, 3:46:47 PM)
+      ✔ build the nessecary UI @done (6/27/2022, 11:54:33 AM)
+      ✔ Use relevant icons for the purpose @done (6/27/2022, 11:54:36 AM)
+      ✔ wire up the functions with the UI @done (6/27/2022, 11:54:48 AM)
+      ✔ do optimistic updates and proper fallback in case of error @done (6/27/2022, 3:46:42 PM)
+      ✔ proper error handling @done (6/27/2022, 3:46:45 PM)
+    ✔ Create a modal for the addFriend button where the user will wire up the email of the person it needs to send a friend request to @done (6/27/2022, 3:46:52 PM)
+      ✔ Build up the UI @done (6/27/2022, 11:54:51 AM)
+      ✔ wire up the api call @done (6/27/2022, 11:54:53 AM)
+      ✔ Notify with a proper feedback if the invitation is sent successfully or there is no such user in the app @done (6/27/2022, 3:16:09 PM)
+      ✔ Disable the button till a valid email is written in the input box on the addFriend modal @done (6/27/2022, 3:46:50 PM)
 ☐ Chat Service
   ☐ Once they are friends they can privately chat 
   ☐ figure out using socket.io with nest js from the docs
@@ -25,14 +48,3 @@
 ☐ Video Call Room Service
   - No idea as of now
   - will use webRTC
-
-Tech Stack
-- React
-- React Router DOM
-- Redux-Toolkit (not sure yet if required)
-- Tailwind CSS
-- Socket.io
-- NestJS
-- MongoDB and Mongoose
-- Typescript
-- SuperTokens

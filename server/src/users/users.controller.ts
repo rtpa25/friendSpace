@@ -63,4 +63,16 @@ export class UsersController {
       throw new BadRequestException(res.message);
     }
   }
+
+  @Get('/friends')
+  @UseGuards(AuthGuard)
+  async getAllFriends(@CurrentUserEmail() currentUserEmail: string) {
+    return this.usersService.findAllFriends(currentUserEmail);
+  }
+
+  @Get('/invites')
+  @UseGuards(AuthGuard)
+  async getAllInvites(@CurrentUserEmail() currentUserEmail: string) {
+    return this.usersService.findAllInvites(currentUserEmail);
+  }
 }

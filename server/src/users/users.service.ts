@@ -77,4 +77,14 @@ export class UsersService {
       message: 'added friend successfully',
     };
   }
+
+  async findAllFriends(email: string) {
+    const user = await this.userModel.findOne({ email }).populate('friends');
+    return user.friends;
+  }
+
+  async findAllInvites(email: string) {
+    const user = await this.userModel.findOne({ email }).populate('invites');
+    return user.invites;
+  }
 }
