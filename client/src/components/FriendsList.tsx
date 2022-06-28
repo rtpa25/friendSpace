@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { useAppDispatch, useAppSelector } from '../hooks/reduxHooks';
+import { setChatData } from '../store/slices/chatWindowData.slice';
 import { setFriends } from '../store/slices/friends.slice';
 import { User } from '../types/user';
 import { axiosInstance } from '../utils/axios';
@@ -29,6 +30,10 @@ const FriendsList = () => {
     fetchAllFriends();
   }, [dispatch]);
 
+  const chatWindowHandler = (user: User) => {
+    dispatch(setChatData({ isOpen: true, user: user }));
+  };
+
   return (
     <FriendsContainer>
       <AddFriendButton onClick={() => setShowAddInvitationModal(true)}>
@@ -46,7 +51,9 @@ const FriendsList = () => {
         <ChatListDiv>
           {friends.map((friend: User) => {
             return (
-              <ChatElement key={friend._id}>
+              <ChatElement
+                key={friend._id}
+                onClick={() => chatWindowHandler(friend)}>
                 <ChatAvatar
                   src={`https://ui-avatars.com/api/?background=5865f2&color=fff&name=${friend.username}&font-size=0.3`}
                   alt={friend.username}

@@ -42,9 +42,15 @@
       ✔ Notify with a proper feedback if the invitation is sent successfully or there is no such user in the app @done (6/27/2022, 3:16:09 PM)
       ✔ Disable the button till a valid email is written in the input box on the addFriend modal @done (6/27/2022, 3:46:50 PM)
 ☐ Chat Service
-  ☐ Once they are friends they can privately chat 
+  ✔ Once they are friends they can privately chat @done (6/28/2022, 10:19:51 AM)
   ☐ figure out using socket.io with nest js from the docs
+    ☐ Configure the chat gateway in the gateway files of the message module
   ☐ Build the UI and test
+    ✔ Build the UI for the chat page dynamically rendering @done (6/28/2022, 10:21:33 AM)
+    ☐ Build the messages lists and individual message bubbles UI
+  ☐ Socket Client
+    ☐ integrate the socket client on the react app 
+    ☐ use the find all messages on the main window page to fetch the messages of certain users
 ☐ Video Call Room Service
   - No idea as of now
   - will use webRTC
